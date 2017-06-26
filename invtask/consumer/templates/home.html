@@ -147,7 +147,7 @@ new Vue({
           for (var i = 0; i < vm.profiles.length; i++) {
             var profile = vm.profiles[i];
             if (profile.screen_name === screen_name  ) {
-              vm.profiles.splice(idx, 1); // Remove old
+              vm.profiles.splice(i, 1); // Remove old
               vm.profiles.splice(parseInt(data.body.popularity)-1, 0, data.body); // Add new
             }
           }
